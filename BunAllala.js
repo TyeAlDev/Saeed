@@ -1,23 +1,28 @@
 const products = {
-    'saudi-coffee': { title: 'قهوة عربية سعودية', price: '1 kg / 10 JD', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85', alt: 'Traditional Saudi Arabic coffee being prepared', description: 'Traditional Saudi Arabic coffee, freshly roasted with a rich aroma and smooth taste.' },
-    'turkish-coffee': { title: 'قهوة تركية', price: 'Fresh', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=85', alt: 'Turkish coffee in a small cup', description: 'Rich Turkish coffee prepared with a deep roast and a smooth, intense flavor.' },
-    'french-coffee': { title: 'قهوة فرنسية', price: 'Fresh', image: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=900&q=85', alt: 'French coffee served beside a book', description: 'Smooth French coffee with a gentle roast and a refined, comforting aroma.' },
-    'mixed-spices': { title: 'بهار مشكل', price: 'Fresh', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'A selection of mixed spices', description: 'A fragrant blend of carefully selected spices for everyday cooking.' },
-    'black-pepper': { title: 'فلفل أسود', price: 'Fresh', image: 'https://images.unsplash.com/photo-1599909533604-7e5d7d2b5a1b?auto=format&fit=crop&w=900&q=85', alt: 'Black pepper spices', description: 'A bold, aromatic black pepper to add warmth and depth to every dish.' },
-    'white-pepper': { title: 'فلفل أبيض', price: 'Fresh', image: 'https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=900&q=85', alt: 'White pepper spices', description: 'Delicate white pepper with a warm flavor for savory recipes.' },
-    'kabsa-spice': { title: 'بهار كبسة', price: 'Fresh', image: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=85', alt: 'Kabsa spice blend', description: 'A traditional spice blend prepared to bring rich flavor to kabsa dishes.' },
-    'curry': { title: 'كاري', price: 'Fresh', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'Curry spices', description: 'A warm, fragrant curry blend for flavorful home cooking.' },
-    'cinnamon': { title: 'قرفة', price: 'Fresh', image: 'https://images.unsplash.com/photo-1601379760883-1bb497c558c9?auto=format&fit=crop&w=900&q=85', alt: 'Cinnamon sticks and ground cinnamon', description: 'Sweet and aromatic cinnamon for drinks, desserts, and savory recipes.' },
-    'baharat': { title: 'البهارات', price: 'Fresh', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'A selection of colorful spices', description: 'A fragrant selection of carefully chosen spices to bring warmth and flavor to every dish.' },
-    'chocolate': { title: 'شوكولاتة', price: 'Fresh', image: '', alt: '', description: 'Rich, smooth chocolate made for a sweet moment any time of day.' },
-    'dates': { title: 'تمور', price: 'Fresh', image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/2019_Dates_%2848608157288%29.jpg', alt: 'A fresh assortment of dates', description: 'Premium, soft dates selected for their naturally rich sweetness.' },
-    'nuts': { title: 'مكسرات', price: 'Fresh', image: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Walnuts_pistachios_cashew_almonds.jpg', alt: 'Almonds, cashews, pistachios, and mixed nuts', description: 'A crunchy selection of almonds, cashews, Aleppo pistachios, and other fresh roasted nuts.' },
-    'beauty': { title: 'تجميل', price: 'Fresh', image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85', alt: 'Beauty and skincare products', description: 'Carefully selected beauty and self-care essentials.' },
-    'matcha': { title: 'ماتشا', price: 'Fresh', image: 'https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=900&q=85', alt: 'A cup of matcha tea', description: 'A vibrant matcha drink with a rich taste and naturally refreshing finish.' },
-    'green-tea': { title: 'شاي أخضر', price: 'Fresh', image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=85', alt: 'A cup of green tea with tea leaves', description: 'Light, naturally refreshing green tea for a calm everyday moment.' }
+    'saudi-coffee': { title: 'قهوة عربية سعودية', price: '1 كجم / 10 د.أ', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85', alt: 'تحضير قهوة عربية سعودية', description: 'قهوة عربية سعودية محمصة حديثًا، برائحة غنية ومذاق ناعم.' },
+    'turkish-coffee': { title: 'قهوة تركية', price: 'طازج', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=85', alt: 'قهوة تركية في فنجان صغير', description: 'قهوة تركية غنية بتحميص عميق ومذاق قوي وناعم.' },
+    'french-coffee': { title: 'قهوة فرنسية', price: 'طازج', image: 'https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=900&q=85', alt: 'قهوة فرنسية بجانب كتاب', description: 'قهوة فرنسية ناعمة بتحميص خفيف ورائحة مريحة.' },
+    'mixed-spices': { title: 'بهار مشكل', price: 'طازج', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'تشكيلة من البهارات المشكلة', description: 'خلطة عطرية من البهارات المختارة بعناية للطبخ اليومي.' },
+    'black-pepper': { title: 'فلفل أسود', price: 'طازج', image: 'https://images.unsplash.com/photo-1599909533604-7e5d7d2b5a1b?auto=format&fit=crop&w=900&q=85', alt: 'بهارات الفلفل الأسود', description: 'فلفل أسود عطري يضيف الدفء والعمق إلى كل طبق.' },
+    'white-pepper': { title: 'فلفل أبيض', price: 'طازج', image: 'https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=900&q=85', alt: 'بهارات الفلفل الأبيض', description: 'فلفل أبيض ناعم بمذاق دافئ للوصفات المالحة.' },
+    'kabsa-spice': { title: 'بهار كبسة', price: 'طازج', image: 'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=900&q=85', alt: 'خلطة بهارات الكبسة', description: 'خلطة بهارات تقليدية تضيف نكهة غنية لأطباق الكبسة.' },
+    'curry': { title: 'كاري', price: 'طازج', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'بهارات الكاري', description: 'خلطة كاري دافئة وعطرية للطبخ المنزلي اللذيذ.' },
+    'cinnamon': { title: 'قرفة', price: 'طازج', image: 'https://images.unsplash.com/photo-1601379760883-1bb497c558c9?auto=format&fit=crop&w=900&q=85', alt: 'أعواد وقرفة مطحونة', description: 'قرفة حلوة وعطرية للمشروبات والحلويات والوصفات المالحة.' },
+    'baharat': { title: 'البهارات', price: 'طازج', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'تشكيلة من البهارات الملونة', description: 'تشكيلة عطرية من البهارات المختارة بعناية لإضافة الدفء والنكهة لكل طبق.' },
+    'chocolate': { title: 'شوكولاتة', price: 'طازج', image: '', alt: '', description: 'شوكولاتة غنية وناعمة للحظات الحلوة في أي وقت.' },
+    'dates': { title: 'تمور', price: 'طازج', image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/2019_Dates_%2848608157288%29.jpg', alt: 'تشكيلة من التمور الطازجة', description: 'تمور فاخرة وطرية مختارة لحلاوتها الطبيعية الغنية.' },
+    'nuts': { title: 'مكسرات', price: 'طازج', image: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Walnuts_pistachios_cashew_almonds.jpg', alt: 'لوز وكاجو وفستق ومكسرات مشكلة', description: 'تشكيلة مقرمشة من اللوز والكاجو والفستق والمكسرات المحمصة.' },
+    'beauty': { title: 'تجميل', price: 'طازج', image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85', alt: 'منتجات العناية والجمال', description: 'منتجات مختارة بعناية للجمال والعناية اليومية.' },
+    'matcha': { title: 'ماتشا', price: 'طازج', image: 'https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=900&q=85', alt: 'كوب ماتشا', description: 'ماتشا بلون زاهٍ ومذاق غني ونهاية منعشة.' },
+    'green-tea': { title: 'شاي أخضر', price: 'طازج', image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=85', alt: 'كوب شاي أخضر مع أوراق الشاي', description: 'شاي أخضر خفيف ومنعش للحظات الهادئة.' }
 };
 const coffeeChoices = ['saudi-coffee', 'turkish-coffee', 'french-coffee', 'matcha', 'green-tea'];
 const spiceChoices = ['mixed-spices', 'black-pepper', 'white-pepper', 'kabsa-spice', 'curry', 'cinnamon'];
+const trendingSets = [
+    ['matcha', 'green-tea', 'dates'],
+    ['saudi-coffee', 'baharat', 'nuts'],
+    ['beauty', 'dates', 'green-tea']
+];
 const dialog = document.getElementById('product-dialog');
 const bagButton = document.querySelector('.bag-button');
 const bagDialog = document.getElementById('bag-dialog');
@@ -30,12 +35,37 @@ let bagCount = 0;
 const bagItems = [];
 let selectedProduct = null;
 
+const trendingProducts = document.querySelectorAll('.trending-product');
+let trendingSetIndex = 0;
+
+function renderTrendingSet() {
+    const trendingContainer = document.querySelector('.trending-products');
+    trendingContainer.classList.add('is-swapping');
+    window.setTimeout(() => {
+        trendingSets[trendingSetIndex].forEach((productKey, index) => {
+            const product = products[productKey];
+            const card = trendingProducts[index];
+            card.dataset.product = productKey;
+            card.querySelector('img').src = product.image;
+            card.querySelector('img').alt = product.alt;
+            card.querySelector('span').textContent = `0${index + 1}`;
+            card.querySelector('strong').textContent = product.title;
+        });
+        trendingContainer.classList.remove('is-swapping');
+    }, 450);
+}
+
+window.setInterval(() => {
+    trendingSetIndex = (trendingSetIndex + 1) % trendingSets.length;
+    renderTrendingSet();
+}, 5000);
+
 function renderBag() {
     bagItemsElement.replaceChildren();
     if (bagItems.length === 0) {
         const emptyMessage = document.createElement('p');
         emptyMessage.className = 'bag-empty';
-        emptyMessage.textContent = 'Your bag is empty.';
+        emptyMessage.textContent = 'سلة التسوق فارغة.';
         bagItemsElement.append(emptyMessage);
         return;
     }
@@ -50,7 +80,7 @@ function renderBag() {
         itemElement.append(title, price);
         if (item.note) {
             const note = document.createElement('p');
-            note.textContent = `Note: ${item.note}`;
+            note.textContent = `ملاحظة: ${item.note}`;
             itemElement.append(note);
         }
         bagItemsElement.append(itemElement);
@@ -60,6 +90,7 @@ function renderBag() {
 function showProduct(productKey) {
     const product = products[productKey];
     selectedProduct = productKey;
+    dialogOptions.setAttribute('aria-label', 'خيارات المنتج');
     dialog.classList.toggle('no-image', !product.image);
     document.getElementById('dialog-image').src = product.image;
     document.getElementById('dialog-image').alt = product.alt;
@@ -73,35 +104,49 @@ function showProduct(productKey) {
     });
 }
 
+function openProductDialog(productKey) {
+    dialog.classList.remove('no-image');
+    dialogOptions.replaceChildren();
+    if (productKey === 'coffee' || productKey === 'baharat') {
+        const choices = productKey === 'coffee' ? coffeeChoices : spiceChoices;
+        document.getElementById('dialog-title').textContent = productKey === 'coffee' ? 'القهوة' : 'البهارات';
+        document.getElementById('dialog-description').textContent = productKey === 'coffee' ? 'اختر نوع القهوة الذي تريده.' : 'اختر نوع البهار الذي تريده.';
+        dialogOptions.setAttribute('aria-label', productKey === 'coffee' ? 'خيارات القهوة' : 'خيارات البهارات');
+        document.getElementById('dialog-price').textContent = '';
+        orderNoteField.hidden = true;
+        orderNote.value = '';
+        addToBagButton.hidden = true;
+        choices.forEach((choiceKey) => {
+            const optionButton = document.createElement('button');
+            optionButton.type = 'button';
+            optionButton.textContent = products[choiceKey].title;
+            optionButton.dataset.product = choiceKey;
+            optionButton.addEventListener('click', () => showProduct(choiceKey));
+            dialogOptions.append(optionButton);
+        });
+        document.getElementById('dialog-image').src = products['saudi-coffee'].image;
+        document.getElementById('dialog-image').alt = products['saudi-coffee'].alt;
+        selectedProduct = null;
+    } else {
+        showProduct(productKey);
+    }
+    dialog.showModal();
+}
+
 document.querySelectorAll('.product-card').forEach((card) => {
-    card.querySelector('.product-image').addEventListener('click', () => {
-        const productKey = card.dataset.product;
-        dialog.classList.remove('no-image');
-        dialogOptions.replaceChildren();
-        if (productKey === 'coffee' || productKey === 'baharat') {
-            const choices = productKey === 'coffee' ? coffeeChoices : spiceChoices;
-            document.getElementById('dialog-title').textContent = productKey === 'coffee' ? 'القهوة' : 'البهارات';
-            document.getElementById('dialog-description').textContent = productKey === 'coffee' ? 'اختر نوع القهوة الذي تريده.' : 'اختر نوع البهار الذي تريده.';
-            dialogOptions.setAttribute('aria-label', productKey === 'coffee' ? 'Coffee choices' : 'Spice choices');
-            document.getElementById('dialog-price').textContent = '';
-            orderNoteField.hidden = true;
-            orderNote.value = '';
-            addToBagButton.hidden = true;
-            choices.forEach((choiceKey) => {
-                const optionButton = document.createElement('button');
-                optionButton.type = 'button';
-                optionButton.textContent = products[choiceKey].title;
-                optionButton.dataset.product = choiceKey;
-                optionButton.addEventListener('click', () => showProduct(choiceKey));
-                dialogOptions.append(optionButton);
-            });
-            document.getElementById('dialog-image').src = products['saudi-coffee'].image;
-            document.getElementById('dialog-image').alt = products['saudi-coffee'].alt;
-            selectedProduct = null;
-        } else {
-            showProduct(productKey);
+    card.querySelector('.product-image').addEventListener('click', () => openProductDialog(card.dataset.product));
+});
+
+trendingProducts.forEach((card, index) => {
+    card.dataset.product = trendingSets[0][index];
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', () => openProductDialog(card.dataset.product));
+    card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openProductDialog(card.dataset.product);
         }
-        dialog.showModal();
     });
 });
 
@@ -127,8 +172,8 @@ addToBagButton.addEventListener('click', () => {
     if (!selectedProduct) return;
     bagItems.push({ product: selectedProduct, note: orderNote.value.trim() });
     bagCount += 1;
-    bagButton.innerHTML = `Bag <span>${bagCount}</span>`;
-    bagButton.setAttribute('aria-label', `Shopping bag, ${bagCount} item${bagCount === 1 ? '' : 's'}`);
+    bagButton.innerHTML = `السلة <span>${bagCount}</span>`;
+    bagButton.setAttribute('aria-label', `سلة التسوق، ${bagCount} منتجات`);
     orderNote.value = '';
     dialog.close();
 });
