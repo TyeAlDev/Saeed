@@ -9,7 +9,10 @@ const products = {
     'curry': { title: 'كاري', price: 'Fresh', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'Curry spices', description: 'A warm, fragrant curry blend for flavorful home cooking.' },
     'cinnamon': { title: 'قرفة', price: 'Fresh', image: 'https://images.unsplash.com/photo-1601379760883-1bb497c558c9?auto=format&fit=crop&w=900&q=85', alt: 'Cinnamon sticks and ground cinnamon', description: 'Sweet and aromatic cinnamon for drinks, desserts, and savory recipes.' },
     'baharat': { title: 'البهارات', price: 'Fresh', image: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=85', alt: 'A selection of colorful spices', description: 'A fragrant selection of carefully chosen spices to bring warmth and flavor to every dish.' },
-    'chocolate': { title: 'شوكولاتة', price: 'Fresh', image: 'https://images.unsplash.com/photo-1575377427642-087cf684f39d?auto=format&fit=crop&w=900&q=85', alt: 'Pieces of dark chocolate', description: 'Rich, smooth chocolate made for a sweet moment any time of day.' },
+    'chocolate': { title: 'شوكولاتة', price: 'Fresh', image: '', alt: '', description: 'Rich, smooth chocolate made for a sweet moment any time of day.' },
+    'dates': { title: 'تمور', price: 'Fresh', image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/2019_Dates_%2848608157288%29.jpg', alt: 'A fresh assortment of dates', description: 'Premium, soft dates selected for their naturally rich sweetness.' },
+    'nuts': { title: 'مكسرات', price: 'Fresh', image: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Walnuts_pistachios_cashew_almonds.jpg', alt: 'Almonds, cashews, pistachios, and mixed nuts', description: 'A crunchy selection of almonds, cashews, Aleppo pistachios, and other fresh roasted nuts.' },
+    'beauty': { title: 'تجميل', price: 'Fresh', image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85', alt: 'Beauty and skincare products', description: 'Carefully selected beauty and self-care essentials.' },
     'matcha': { title: 'ماتشا', price: 'Fresh', image: 'https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=900&q=85', alt: 'A cup of matcha tea', description: 'A vibrant matcha drink with a rich taste and naturally refreshing finish.' },
     'green-tea': { title: 'شاي أخضر', price: 'Fresh', image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=85', alt: 'A cup of green tea with tea leaves', description: 'Light, naturally refreshing green tea for a calm everyday moment.' }
 };
@@ -57,6 +60,7 @@ function renderBag() {
 function showProduct(productKey) {
     const product = products[productKey];
     selectedProduct = productKey;
+    dialog.classList.toggle('no-image', !product.image);
     document.getElementById('dialog-image').src = product.image;
     document.getElementById('dialog-image').alt = product.alt;
     document.getElementById('dialog-title').textContent = product.title;
@@ -72,6 +76,7 @@ function showProduct(productKey) {
 document.querySelectorAll('.product-card').forEach((card) => {
     card.querySelector('.product-image').addEventListener('click', () => {
         const productKey = card.dataset.product;
+        dialog.classList.remove('no-image');
         dialogOptions.replaceChildren();
         if (productKey === 'coffee' || productKey === 'baharat') {
             const choices = productKey === 'coffee' ? coffeeChoices : spiceChoices;
